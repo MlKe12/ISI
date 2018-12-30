@@ -40,6 +40,7 @@
 package JFSM;
 
 import java.util.Set;
+
 import java.util.HashSet;
 
 import java.util.List;
@@ -294,7 +295,6 @@ public class Automate implements Cloneable {
 	*/
 	
 	public Automate emonder() {
-		System.out.println("emonder() : méthode non implémentée");
 		Automate afn = (Automate) this.clone();
 		if (afn.estUtile()) { // si aucun changement n'est nécessaire
 			return afn;
@@ -303,7 +303,6 @@ public class Automate implements Cloneable {
 			while (touslestermes.hasNext()) { // vérifie pour tous les termes
 				String teste = touslestermes.next();
 				if (!((estAccessible (teste)) && ((estcoAccessible (teste))))){
-					System.out.println(teste);
 					Set<String> aretirer = new HashSet<String>();
 					aretirer.add(teste); // Sert à comparer via contains
 					Map<String,Etat> nouveau = new HashMap<String,Etat>();
@@ -355,10 +354,10 @@ public class Automate implements Cloneable {
 			boolean test=false;
 			ArrayList<String> parcourt = new ArrayList<String>(); // historique de tous les états par lesquels la fonction passe
 			parcourt.add(teste); // On commence par le terme recherché
+			Set<String> rejet = new HashSet<String>(); // Si un état ne mène nulle part, on l'ajoute à la liste de rejet
 			while (test==false) {
 				Iterator<Transition> Transition = mu.iterator();
 				Iterator<String> fait = parcourt.iterator();
-				Set<String> rejet = new HashSet<String>(); // Si un état ne mène nulle part, on l'ajoute à la liste de rejet
 				if (!(fait.hasNext())) {
 					return false;
 				}
@@ -434,6 +433,7 @@ public class Automate implements Cloneable {
 					}
 				}
 			}
+			
 			return false;
 		} else {
 			return true;
