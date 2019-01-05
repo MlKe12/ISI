@@ -60,9 +60,11 @@ public class Programme1 {
         F1.add("4");
         Automate afn1 = new AFD(A1, Q1, "1", F1, mu1);
 
-
+      System.out.println("afn 1");
       System.out.println(afn1);
+      System.out.println("l'automate est-il utile ?");
       System.out.println(afn1.estUtile());
+      System.out.println("l'automate émondé");
       System.out.println(afn1.emonder());
       
 
@@ -91,9 +93,11 @@ public class Programme1 {
       I2.add("6");
       Automate afn2 = new AFN(A2, Q2, I2, F2, mu2);
 
-
+    System.out.println("afn 2");
     System.out.println(afn2);
+    System.out.println("l'automate est-il utile ?");
     System.out.println(afn2.estUtile());
+    System.out.println("l'automate émondé");
     System.out.println(afn2.emonder());
     
 
@@ -119,9 +123,11 @@ public class Programme1 {
     F3.add("6");
     Automate afn3 = new AFD(A3, Q3, "1", F3, mu3);
 
-
+  System.out.println("afn 3");
   System.out.println(afn3);
+  System.out.println("l'automate est-il utile ?");
   System.out.println(afn3.estUtile());
+  System.out.println("l'automate émondé");
   System.out.println(afn3.emonder());
   
   
@@ -140,8 +146,8 @@ public class Programme1 {
   mu4.add(new Transition("1","b","7"));
   mu4.add(new Transition("1","c","7"));
   mu4.add(new Transition("2","b","7"));
-  mu4.add(new Transition("4"," ","5"));
-  mu4.add(new Transition("5"," ","7"));
+  mu4.add(new EpsilonTransition("4","5"));
+  mu4.add(new EpsilonTransition("5","7"));
 
   Set<String> F4 = new HashSet<String>();
   F4.add("6");
@@ -155,8 +161,11 @@ public class Programme1 {
   I4.add("8");
   Automate afn4 = new AFN(A4, Q4, I4, F4, mu4);
   
+  System.out.println("afn 4");
   System.out.println(afn4);
+  System.out.println("l'automate est-il utile ?");
   System.out.println(afn4.estUtile());
+  System.out.println("l'automate émondé");
   System.out.println(afn4.emonder());
   
   Set<String> A5 = new HashSet<String>();      
@@ -175,8 +184,11 @@ public class Programme1 {
   F5.add("3");
   Automate afn5 = new AFD(A5, Q5, "1", F5, mu5);
 
+  System.out.println("afn 5");
   System.out.println(afn5);
+  System.out.println("l'automate est-il utile ?");
   System.out.println(afn5.estUtile());
+  System.out.println("l'automate émondé");
   System.out.println(afn5.emonder());
    }
 }

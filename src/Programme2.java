@@ -59,6 +59,7 @@ public class Programme2 {
         mu1.add(new Transition("3","b","6"));
         mu1.add(new Transition("4","a","3"));
         mu1.add(new Transition("4","b","5"));
+        mu1.add(new Transition("5","b","5"));
         mu1.add(new Transition("5","a","6"));
         mu1.add(new Transition("6","b","6"));
         mu1.add(new Transition("6","a","7"));
@@ -86,6 +87,7 @@ public class Programme2 {
         mu2.add(new Transition("3","b","6"));
         mu2.add(new Transition("4","a","3"));
         mu2.add(new Transition("4","b","5"));
+        mu2.add(new Transition("5","b","5"));
         mu2.add(new Transition("5","a","6"));
         mu2.add(new Transition("6","b","6"));
         mu2.add(new Transition("6","a","7"));
@@ -239,35 +241,51 @@ public class Programme2 {
         
         System.out.println("afn 1");
         System.out.println(afn1);
-        System.out.println(afn1.estUtile());    
+        System.out.println("l'automate est-il utile ?");
+        System.out.println(afn1.estUtile()); 
+        System.out.println("l'automate émondé");
         System.out.println(afn1.emonder());  
         System.out.println("afn 2");
         System.out.println(afn2);
+        System.out.println("l'automate est-il utile ?");
         System.out.println(afn2.estUtile());    
+        System.out.println("l'automate émondé");
         System.out.println(afn2.emonder());
         System.out.println("afn 3");
         System.out.println(afn3);
+        System.out.println("l'automate est-il utile ?");
         System.out.println(afn3.estUtile());    
+        System.out.println("l'automate émondé");
         System.out.println(afn3.emonder());
         System.out.println("afn 4");
         System.out.println(afn4);
+        System.out.println("l'automate est-il utile ?");
         System.out.println(afn4.estUtile());    
+        System.out.println("l'automate émondé");
         System.out.println(afn4.emonder());  
         System.out.println("afn 5");
         System.out.println(afn5);
+        System.out.println("l'automate est-il utile ?");
         System.out.println(afn5.estUtile());    
+        System.out.println("l'automate émondé");
         System.out.println(afn5.emonder());  
         System.out.println("afn 6");
         System.out.println(afn6);
+        System.out.println("l'automate est-il utile ?");
         System.out.println(afn6.estUtile());    
+        System.out.println("l'automate émondé");
         System.out.println(afn6.emonder());  
         System.out.println("afn 7");
         System.out.println(afn7);
+        System.out.println("l'automate est-il utile ?");
         System.out.println(afn7.estUtile());    
+        System.out.println("l'automate émondé");
         System.out.println(afn7.emonder());  
         System.out.println("afn 8");
         System.out.println(afn8);
+        System.out.println("l'automate est-il utile ?");
         System.out.println(afn8.estUtile());    
+        System.out.println("l'automate émondé");
         System.out.println(afn8.emonder()); 
         
         
